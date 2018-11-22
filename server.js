@@ -45,6 +45,14 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        pageTitle: 'Projects page',
+        welcomeMessage: 'Hello projects!',
+        currentYear: new Date().getFullYear()
+    });
+});
+
 app.listen(port, () => {
     console.log('Listening on port ' + port);
 });
